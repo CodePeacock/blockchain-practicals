@@ -1,0 +1,33 @@
+mkdir ethnode
+
+cd ethnode
+
+geth account new --datadir H:\BTPractical\ethnode testnet-blockchain
+
+create genesis.json file in ethnode.
+
+{
+    "config": {
+        "chainId": 3792,
+        "homesteadBlock": 0,
+        "eip150Block": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+    "difficulty": "2000",
+    "gasLimit": "2100000",
+    "alloc": {
+        "your_public_key": {
+            "balance": "9000000000000000000"
+        }
+    }
+}
+
+
+geth --datadir C:\Users\admin\ethnode init C:\Users\admin\ethnode\genesis.json
+
+geth --identity "localB" --http --http.port "8280" --http.corsdomain "*" --http.api "db,eth,net,web3" --datadir "C:\Users\admin\ethnode2" --port "30303" --nodiscover --networkid 1999 console
+
+
+miner.setEtherbase('0x3A7b442afa94ba96396DF86336172947Fa9C48BE')
+miner.start()
