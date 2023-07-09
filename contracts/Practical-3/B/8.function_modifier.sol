@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.17;
 
 contract ExampleContract {
     address public owner = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
