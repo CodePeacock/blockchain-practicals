@@ -1,4 +1,7 @@
-import requests, uuid, json
+import json
+import uuid
+
+import requests
 
 # Add your key and endpoint
 key = "a8fda9bfba274fb481a60c690324014e"
